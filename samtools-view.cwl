@@ -4,9 +4,9 @@ cwlVersion: v1.0
 class: CommandLineTool
 
 requirements:
-#- $import: envvar-global.yml
-- $import: samtools-docker.yml
-- class: InlineJavascriptRequirement
+  InlineJavascriptRequirement: {}
+  DockerRequirement:
+    dockerPull: isaacliao/samtools-0.1.19
 
 inputs:
   isbam:

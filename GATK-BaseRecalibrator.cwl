@@ -5,8 +5,8 @@ class: CommandLineTool
 
 
 requirements:
-#- $import: envvar-global.yml
-- $import: GATK-docker.yml
+ DockerRequirement:
+   dockerPull: fzkhan/picard-1.136-gatk-2.8
 
 inputs: # position 0, for java args, 1 for the jar, 2 for the tool itself
   deletions_default_quality:
