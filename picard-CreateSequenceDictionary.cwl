@@ -51,7 +51,7 @@ class: CommandLineTool
 #    foaf:mbox: mailto:Andrey.Kartashov@cchmc.org
     
 requirements:
-- $import: envvar-global.yml
+#- $import: envvar-global.yml
 - $import: picard-docker.yml
 - class: InlineJavascriptRequirement
 

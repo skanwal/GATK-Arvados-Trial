@@ -68,7 +68,7 @@ class: CommandLineTool
 #    foaf:name: Sehrish Kanwal
 #    foaf:mbox: mailto:skanwal@student.unimelb.edu.au
 requirements:
-- $import: envvar-global.yml
+#- $import: envvar-global.yml
 - $import: GATK-docker.yml
 
 

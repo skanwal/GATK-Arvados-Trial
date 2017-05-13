@@ -68,8 +68,8 @@ class: CommandLineTool
 #    foaf:name: Sehrish Kanwal
 #    foaf:mbox: mailto:skanwal@student.unimelb.edu.au
 requirements:
-- $import: envvar-global.yml
-- $import: envvar-global.yml
+#- $import: envvar-global.yml
+#- $import: envvar-global.yml
 - $import: GATK-docker.yml
 
 inputs: # position 0, for java args, 1 for the jar, 2 for the tool itself
