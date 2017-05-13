@@ -1,0 +1,2 @@
+class: DockerRequirement
+dockerPull: fzkhan/picard-1.136-gatk-2.8

@@ -1,0 +1,13 @@
+input: 
+  class: File
+  path: inputFiles/bwa-mem-2016-08-04.sam
+  
+samtools-view-isbam: true
+  
+samtools-view-threads: -Sb
+  
+output_samtools-view: samtools-view-2017-05-02
+  
+output_samtools-sort: samtools-sort-2017-05-02
+  
+  

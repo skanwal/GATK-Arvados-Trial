@@ -1,0 +1,47 @@
+input: 
+  class: File
+  path: inputFiles/bwa-mem-2016-08-04.sam
+  
+samtools-view-isbam: true
+  
+samtools-view-threads: -Sb
+  
+output_samtools-view: samtools-view-2017-05-05.bam
+  
+output_samtools-sort: samtools-sort-2017-05-05.bam
+
+output_markDuplicates: markDuplicates-2017-05-05.bam
+  
+metricsFile_markDuplicates: metricsFile-markDuplicate2017-05-05.metrics
+  
+readSorted_markDuplicates: true
+  
+removeDuplicates_markDuplicates: true
+  
+createIndex_markDuplicates: true
+
+output_RealignTargetCreator: RealignTargetCreator2017-05-05.intervals
+  
+known_variant_db: [{"path":"../../GATK-workflow/data/GATK-complete-workflow/Ref_datasets/dbsnp_138.vcf", "class": "File"}, {"path": "../../GATK-workflow/data/GATK-complete-workflow/Ref_datasets/Mills_and_1000G_gold_st.vcf", "class": "File"}, {"path": "../../GATK-workflow/data/GATK-complete-workflow/Ref_datasets/1000G_phase1.indels.hg19.vcf", "class": "File"}]
+
+reference: 
+  class: File
+  path: inputFiles/hg19.fasta
+  
+output_IndelRealigner: IndelRealigner2017-05-05.bam
+
+output_BaseRecalibrator: BaseRecalibrator2017-05-05.table
+  
+covariate: [CycleCovariate, ContextCovariate]
+
+output_PrintReads: PrintReads2017-05-05.bam
+
+output_HaplotypeCaller: HaplotypeCaller2017-05-05.vcf
+
+dbsnp: 
+  class: File
+  path: ../../GATK-workflow/data/GATK-complete-workflow/Ref_datasets/dbsnp_138.vcf
+
+
+  
+  

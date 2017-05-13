@@ -1,0 +1,2 @@
+class: DockerRequirement
+dockerPull: isaacliao/samtools-0.1.19

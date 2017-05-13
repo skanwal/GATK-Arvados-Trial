@@ -1,0 +1,60 @@
+reference: 
+  class: File
+  path: keep:0b83f15c46e035069672dc9410a79f09+13238/inputFiles/hg19.fasta
+  
+reads:
+ - class: File
+   path: keep:0b83f15c46e035069672dc9410a79f09+13238/Fastq-files/FQ_1.fastq
+ - class: File
+   path: keep:0b83f15c46e035069672dc9410a79f09+13238/Fastq-files/FQ_2.fastq
+  
+bwa_output_filename: bwa-mem-2017-05-07.sam
+
+createDict_output_filename: hg19.dict
+   
+samtools-view-isbam: true
+  
+samtools-view-threads: -Sb
+  
+output_samtools-view: samtools-view-2017-05-07.bam
+  
+output_samtools-sort: samtools-sort-2017-05-07.bam
+
+output_markDuplicates: markDuplicates-2017-05-07.bam
+  
+metricsFile_markDuplicates: metricsFile-markDuplicate2017-05-07.metrics
+  
+readSorted_markDuplicates: true
+  
+removeDuplicates_markDuplicates: true
+  
+createIndex_markDuplicates: true
+
+output_RealignTargetCreator: RealignTargetCreator2017-05-07.intervals
+  
+known_variant_db:
+  - class: File
+    path: keep:0b83f15c46e035069672dc9410a79f09+13238/Ref_datasets/dbsnp_138.vcf
+  - class: File
+    path: keep:0b83f15c46e035069672dc9410a79f09+13238/Ref_datasets/Mills_and_1000G_gold_st.vcf
+  - class: File
+    path: keep:0b83f15c46e035069672dc9410a79f09+13238/Ref_datasets/1000G_phase1.indels.hg19.vcf
+  
+output_IndelRealigner: IndelRealigner2017-05-07.bam
+
+output_BaseRecalibrator: BaseRecalibrator2017-05-07.table
+  
+covariate: [CycleCovariate, ContextCovariate]
+
+output_PrintReads: PrintReads2017-05-07.bam
+
+output_HaplotypeCaller: HaplotypeCaller2017-05-07.vcf
+
+dbsnp: 
+  class: File
+  path: keep:0b83f15c46e035069672dc9410a79f09+13238/Ref_datasets/dbsnp_138.vcf
+
+
+  
+  
+     
